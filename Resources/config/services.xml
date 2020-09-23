@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="eexbee_jalali_date_time_bundle" class="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" />
+        <service id="eexbee_jalali_date_time_bundle.service" class="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" />
+        <service id="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" alias="eexbee_jalali_date_time_bundle.service" />
+        <service id="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" alias="eexbee_jalali_date_time_bundle" />
+    </services>
+</container>
