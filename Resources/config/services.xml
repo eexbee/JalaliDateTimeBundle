@@ -4,9 +4,15 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="eexbee_jalali_date_time_bundle" class="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" />
-        <service id="eexbee_jalali_date_time_bundle.service" class="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" />
-        <service id="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" alias="eexbee_jalali_date_time_bundle.service" />
-        <service id="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" alias="eexbee_jalali_date_time_bundle" />
+        <service id="eexbee.jalali_date_time_bundle" class="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" />
+        <service id="eexbee.jalali_date_time_bundle.service" class="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" />
+        <service id="Eexbee\JalaliDateTimeBundle\Service\DateTimeService" alias="eexbee.jalali_date_time_bundle.service" />
+        <service id="Eexbee\JalaliDateTimeBundle\EexbeeJalaliDateTimeBundle" alias="eexbee.jalali_date_time_bundle" />
+
+        <service id="eexbee.jalali_date_time_bundle.twig" class="Eexbee\JalaliDateTimeBundle\Twig\DateTimeExtension">
+            <tag name="twig.extension" />
+            <!--<argument type="service" id="twig.form.renderer" />-->
+            <argument type="service" id="eexbee.jalali_date_time_bundle.service" />
+        </service>
     </services>
 </container>
