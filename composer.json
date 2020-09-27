@@ -12,9 +12,17 @@
     "require": {
         "php": "^7.1.3"
     },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^5.1"
+    },
     "autoload": {
         "psr-4": {
             "Eexbee\\JalaliDateTimeBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eexbee\\JalaliDateTimeBundle\\Tests\\": "Tests/"
         }
     }
 }
