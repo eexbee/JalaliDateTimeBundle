@@ -13,7 +13,7 @@ Brings Jalali (Persian/Iranian) DateTime to Symfony/Twig
 ## Usage
 This bundle provides Jalali DateTime tools to be used inside your Controllers, Twig templates and forms.
 
-###1. Twig
+### 1. Twig
 Use `j_datetime_format` twig filter to convert php DateTime object into Jalali format
 ``` twig
 {# templates/frontend/home.html.twig #}
@@ -45,11 +45,11 @@ Example:
 [Checkout availabe formats](#format-table)
 
 
-###2. Form
+### 2. Form
 
 
 
-###3. Service
+### 3. Service
 
 
 ### Format Table
