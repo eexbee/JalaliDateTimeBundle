@@ -50,6 +50,7 @@ Example:
 
 
 ### 3. Service
+Jalali DateTime service is automatically ready to use due to the symfony service management and dependency injection mechanism.
 
 
 ### Format Table
