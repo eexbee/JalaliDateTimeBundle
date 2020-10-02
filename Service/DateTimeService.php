@@ -258,6 +258,21 @@ class DateTimeService
         return($lang !== 'en') ? $this->persianEnglishNumberTransform($resultOutput, 'fa', '.') : $resultOutput;
     }
 
+    /**
+     * @param \DateTime $dateTime
+     * @param string $implodeCharacter
+     * @return array|string
+     */
+    public function gregorianToJalaliFromDateTimeObject(\DateTime $dateTime, $implodeCharacter = '')
+    {
+        return $this->gregorianToJalali(
+            $dateTime->format("Y"),
+            $dateTime->format("m"),
+            $dateTime->format("d"),
+            $implodeCharacter
+        );
+    }
+
 
     /**
      * @param $year
@@ -368,6 +383,9 @@ class DateTimeService
         if (empty($implodeCharacter)) {
             return [$gy, $gm, $gd];
         }
+
+        $gm = ($gm < 10)?"0$gm":$gm;
+        $gd = ($gd < 10)?"0$gd":$gd;
 
         return implode($implodeCharacter, [$gy, $gm, $gd]);
     }
