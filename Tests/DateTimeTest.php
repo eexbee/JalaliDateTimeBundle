@@ -10,7 +10,7 @@ class DateTimeTest extends TestCase
     public function testGregorianToJalali()
     {
         $service = new DateTimeService();
-        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10");
+        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10", new \DateTimeZone('Asia/Tehran'));
         $jalali = $service->gregorianToJalaliFromDateTimeObject($dateTime, "-");
         $this->assertEquals("1399-1-16", $jalali);
     }
@@ -18,16 +18,16 @@ class DateTimeTest extends TestCase
     public function testDate()
     {
         $service = new DateTimeService();
-        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10");
-        $date = $service->date('Y-m-d H:i:s', $dateTime->getTimestamp(), "Asia/Tehran", 'en');
+        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10", new \DateTimeZone('Asia/Tehran'));
+        $date = $service->date('Y-m-d H:i:s', $dateTime->getTimestamp(), 'Asia/Tehran', 'en');
         $this->assertEquals("1399-01-16 11:08:10", $date);
-        //TODO: test more formats 
+        //TODO: test more formats
     }
 
     public function testJalaliToGregorian()
     {
         $service = new DateTimeService();
-        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10");
+        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10", new \DateTimeZone('Asia/Tehran'));
         $date = $service->jalaliToGregorian(
             "1399",
             "01",
@@ -40,7 +40,7 @@ class DateTimeTest extends TestCase
     public function testMakeTime()
     {
         $service = new DateTimeService();
-        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10");
+        $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s', "2020-04-04 11:08:10", new \DateTimeZone('Asia/Tehran'));
         $timestamp = $service->makeTime(
             11,
             8,
