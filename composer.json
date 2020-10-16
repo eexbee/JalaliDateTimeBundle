@@ -26,6 +26,7 @@
             "Eexbee\\JalaliDateTimeBundle\\": ""
         }
     },
+    "minimum-stability": "dev",
     "autoload-dev": {
         "psr-4": {
             "Eexbee\\JalaliDateTimeBundle\\Tests\\": "Tests/"
