@@ -2,7 +2,6 @@
 # JalaliDateTimeBundle
 Brings Jalali (Persian/Iranian) DateTime to Symfony/Twig
 
-**Under Development yet**
 
 ## Requirements
 - symfony > 3.4
@@ -46,7 +45,7 @@ Example:
 
 
 ### 2. Form
-
+soon
 
 
 ### 3. Service
