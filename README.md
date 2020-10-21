@@ -1,6 +1,8 @@
-
 # JalaliDateTimeBundle
 Brings Jalali (Persian/Iranian) DateTime to Symfony/Twig
+
+[![Build Status](https://travis-ci.org/eexbee/JalaliDateTimeBundle.svg?branch=master)](https://travis-ci.org/github/eexbee/JalaliDateTimeBundle)
+[![Latest Stable Version](https://poser.pugx.org/eexbee/jalali-date-time-bundle/v/stable.svg)](https://packagist.org/packages/eexbee/jalali-date-time-bundle)
 
 
 ## Requirements
